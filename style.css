@@ -1,0 +1,373 @@
+/* 画面共通 */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+.site-width {
+    width: 980px;
+    margin: 0 auto;
+}
+
+/* ヘッダー */
+
+#header-container {
+    overflow: hidden;
+}
+
+.header-title {
+    font-size: 20px;
+    margin: 15px;
+    background: #F69454;
+    height: 150px;
+    width: 150px;
+    text-align: center;
+    line-height: 150px;
+    float: left;
+}
+
+.header-title a{
+    text-decoration: none; 
+    color: #FCFDFE;
+    
+}
+
+.header-nav {
+    height: 170px;
+    float: right;
+    position: relative;
+}
+
+/* メニューの幅調整 */
+
+.header-nav-before-login {
+    width: 50%;
+}
+
+.header-nav-after-login {
+    width: 80%;
+}
+
+.header-nav ul {
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+}
+
+.header-nav ul li {
+    list-style: none;
+    float: left;
+}
+
+.header-nav ul li a {
+    text-decoration: none;
+    padding: 15px 30px;
+    color: #739f3d;
+    font-size: 20px;
+}
+
+/* 新規、ログイン、店舗基本情報、記事投稿入力フォーム */
+
+label {
+    display: block;
+}
+
+.form {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border: 5px solid #F69454;
+    padding: 30px;
+}
+
+.form-new {
+    height: 520px;
+}
+
+.form-login {
+    height: 460px;
+}
+
+.form-info {
+    height: 950px;
+}
+
+.form-pos {
+    width: 700px;
+    height: 900px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border: 5px solid #F69454;
+    padding: 30px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 0;
+    color: #4b4b4b;
+}
+
+.color-change-black {
+    color: #4b4b4b;
+}
+
+.inputs {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 20px;
+    border: 1px solid #F69454;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    margin-bottom: 20px;
+    padding: 10px;
+    outline: 0;
+    font-size: 16px;
+}
+
+.btn {
+    float: right;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px 30px;
+    border: none;
+    background: #F69454;
+    color: #fcfdfe;
+    font-size: 20px;
+    outline: none;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.err-msg {
+    color: #739f3d;
+    height: 30px;
+}
+
+/* 投稿画面のみ使用 */
+
+.pos-title {
+    margin-bottom: 20px;
+}
+
+.pos-input {
+    height: 30px;
+    width: 50%;
+    outline: none;
+    border: 1px solid #7676;
+}
+
+.pos-textarea {
+    width: 100%;
+    outline: none;
+    resize: none;
+    overflow-y: scroll;
+    border: 1px solid #7676;
+}
+
+.pos-counter {
+    float: right;
+}
+
+.pos-area {
+    padding: 20px 0;
+}
+
+.pos-pic-err-msg{
+    font-size: 15px;
+}
+
+/* 投稿画面のセレクトボックス */
+
+.pos-select-box {
+    padding: 5px;
+    border: 1px solid #7676;
+}
+
+/* 登録選択、退会、登録完了画面 */
+
+.choise-wrap {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 70px;
+    height: 300px;
+}
+
+.btn-choice {
+    width: 300px;
+    box-sizing: border-box;
+    padding: 15px 30px;
+    border: none;
+    background: #F69454;
+    color: #fcfdfe;
+    font-size: 25px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 50px;
+    outline: none;
+}
+
+.btn-choice:hover {
+    cursor: pointer;
+}
+
+.sentence {
+    display: block;
+    text-align: center;
+    color: #4b4b4b;
+}
+
+/* 写真部分 */
+
+.pic-container {
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.pic-wrap {
+    float: left;
+    width: 31.1%;
+    padding-right: 15px;
+}
+
+.pic-display {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background: #739f3d;
+    text-align: center;
+    line-height: 150px;
+    color: #fcfdfe;
+}
+
+.pic-file {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    top: 0;
+    left: 0;
+}
+
+.pic-file:hover {
+    cursor: pointer;
+}
+
+.prev-img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* TOP画面 */
+
+.top-post-wrap {
+    display: flex;
+    border: 3px solid #eee;
+    padding: 20px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.post-avatar {
+    width: 18rem;
+    height: 10rem;
+    margin-right: 20px;
+}
+
+.select-form {
+    width: 200px;
+    margin-right: 20px;
+}
+
+.sidebar {
+    width: 200px;
+    float: left;
+    box-sizing: border-box;
+}
+
+.top-main-wrap {
+    width: 760px;
+    float: right;
+}
+
+.top-wrap {
+    overflow: hidden;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.get-param-link {
+    text-decoration: none;
+    color: #4b4b4b;
+}
+
+/* topと投稿画面のセレクトボックス */
+
+.top-select-box {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid;
+}
+
+.top-select-box:hover {
+    cursor: pointer;
+}
+
+/* 店舗詳細画面  */
+
+table {
+    border-collapse: collapse;
+    border: 5px solid #eee;
+    margin: 0 auto;
+    margin-top: 40px;
+
+}
+
+th, td {
+    padding: 15px;
+}
+
+.form-detail {
+    width: 700px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border: 5px solid #F69454;
+    padding: 30px;
+   
+}
+
+
+.detail-pic {
+    width: 14rem;
+    height: 10rem;
+    margin-right: 20px;
+}
+
+/* フッター（最下部に固定用） */
+html {
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background: #F69454;
+    color: #FCFDFE;
+    text-align: center;
+}
