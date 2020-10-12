@@ -10,4 +10,4 @@ mogumogu
 自動で記事が非公開になるという特徴を生かし、１日２日の急な宣伝にも使いやすいのが特徴です。
 
 # 開発環境
-macOS(Catallina)、html5、CSS3、jQuery(3.5.1)、PHP（7.4.2)、MAMP、Photoshop
+macOS(Catallina)、html5、CSS3、JavaScript(jQuery(3.5.1))、PHP（7.4.2)、MAMP
