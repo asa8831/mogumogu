@@ -1,8 +1,9 @@
 <?php
-// ログを表示
+// ログを表示（本番環境ではOFF）
 // error_reporting(E_ALL);
 // ini_set('log_errors', 'On');
-ini_set('error_log', 'php.log');
+// ini_set('display_errors', "On");
+// ini_set('error_log', 'php.log');
 
 // デバッグ
 $debug_flg = true;
@@ -14,13 +15,9 @@ function debug($str)
   }
 }
 
-// 現在セッションに何が入っているか
-function sessionNow(){
-  debug('$_SESSIONの中身:'.print_r($_SESSION,true));
-}
 
 // セッション関係
-session_save_path('/var/tmp');
+// session_save_path('/var/tmp');
 ini_set('session.gc_maxlifetime', 60 * 60 * 24 * 30);
 ini_set('session.cookie_lifetime', 60 * 60 * 24 * 30);
 session_start();
@@ -140,23 +137,18 @@ function dbConnect(){
   debug('dbConnect開始');
 
   try {
-    $dsn = 'mysql:dbname=mogumogu;host=localhost;charset=utf8';
-    $username = 'root';
-    $pass = 'root';
+    $dsn = 'mysql:dbname=LAA1207944-mogumogu;host=mysql147.phy.lolipop.lan;charset=utf8';
+    $username = '';
+    $pass = '';
     $option = array(
       PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
       PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
       PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true,
     );
-    // debug('dbConnectの中の$dsn'.print_r($dsn,true));
-    // debug('dbConnectの中の$username'.print_r($username,true));
-    // debug('dbConnectの中の$pass'.print_r($pass,true));
-    // debug('dbConnectの中の$option'.print_r($option,true));
-
+    
     $dbh = new PDO($dsn, $username, $pass, $option);
-    // debug('dbConnectの中の$dbh:'.print_r($dbh,true));
-
     return $dbh;
+    
   } catch (Exception $e) {
     
     error_log('dbConnectでエラーが発生しました' . $e->getMessage());

@@ -15,7 +15,7 @@ require('head.php'); ?>
 
   <?php require('header.php'); ?>
 
-  <section class="choise-wrap">
+  <section class="choice-wrap">
 
     <form>
 

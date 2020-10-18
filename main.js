@@ -3,13 +3,13 @@
 $(function () {
 
   // バリデーション
-  const NO_ENTERED = 'js入力必須事項です';
-  const ERR_PHONE = 'js電話番号の形式で入力してください';
-  const MAX_LENGTH = 'js入力最大数を超えています';
-  const MIN_LENGTH = 'js6文字以上で入力をしてください';
-  const ERR_EMAIL = 'jsemailの形式で入力をしてください';
-  const ERR_HAN = 'js半角英数字で入力してください';
-  const ERR_REPASS = 'js再入力はパスワードと同じものを入力してください';
+  const NO_ENTERED = '入力必須事項です';
+  const ERR_PHONE = '電話番号の形式で入力してください';
+  const MAX_LENGTH = '入力最大数を超えています';
+  const MIN_LENGTH = '6文字以上で入力をしてください';
+  const ERR_EMAIL = 'emailの形式で入力をしてください';
+  const ERR_HAN = '半角英数字で入力してください';
+  const ERR_REPASS = '再入力はパスワードと同じものを入力してください';
 
   const min = 6;
   const max = 255;

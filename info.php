@@ -2,7 +2,6 @@
 
 require('function.php');
 debug('店舗基本情報ページ');
-sessionNow();
 
 // 画面表示
 $dbData = getUserData($_SESSION['user_id']);

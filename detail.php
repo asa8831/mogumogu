@@ -2,7 +2,6 @@
 
 require('function.php');
 debug('投稿記事詳細');
-sessionNow();
 
 
 // ---------------------
@@ -29,7 +28,6 @@ require('head.php'); ?>
   <section>
 
     <form action="" class="form-detail">
-
 
       <div class="err-msg"><?php if (!empty($err_msg['common'])) echo $err_msg['common']; ?></div>
 

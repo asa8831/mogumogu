@@ -2,8 +2,6 @@
 
 require('function.php');
 debug('投稿/修正画面');
-sessionNow();
-
 
 // エリアのセレクトボックス表示用
 $getCategory = getCategory();

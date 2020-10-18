@@ -1,7 +1,4 @@
-
 <?php
-debug('ログイン済みか確認します');
-
 if (!empty($_SESSION['login_date'])) {
 
   if ($_SESSION['login_date'] + $_SESSION['login_limit'] < time()) {
@@ -18,13 +15,12 @@ if (!empty($_SESSION['login_date'])) {
     // すでにchoice.phpにいればchoice.phpには遷移しない
     if (basename($_SERVER['PHP_SELF']) === 'login.php') {
       debug('ログイン済みのため、会員画面に遷移します');
-      header('Location:choise.php');
+      header('Location:choice.php');
       exit;
     }
   }
 
 } else {
-
   // login.php内でループを回避するための処理
   if (basename($_SERVER['PHP_SELF']) !== 'login.php') {
     debug('$_SERVER'.print_r($_SERVER,true));

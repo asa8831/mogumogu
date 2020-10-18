@@ -2,7 +2,6 @@
 
 require('function.php');
 debug('index画面です');
-sessionNow();
 
 // エリアデータ取得
 $getCategory = getCategory();
@@ -91,7 +90,6 @@ require('head.php'); ?>
                               } ?>>選択してください</option>
 
             <?php
-            // area_id area_name
             foreach ($getCategory as $key => $val) :
             ?>
 

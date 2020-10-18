@@ -2,7 +2,6 @@
 
 require('function.php');
 debug('新規登録ページ');
-sessionNow();
 
 
 if (!empty($_POST)) {
@@ -50,7 +49,6 @@ if (!empty($_POST)) {
           $_SESSION['login_limit'] = $session_limit;
           $_SESSION['login_date'] = time();
           $_SESSION['user_id'] = $dbh->lastInsertId();
-
           header('Location:choice.php');
           exit;
           
@@ -82,7 +80,7 @@ require('head.php'); ?>
 
       <div class="err-msg" id ="js-err-email"><?php if (!empty($err_msg['email'])) echo $err_msg['email']; ?></div>
 
-      <label><span class='color-change-black'>メールアドレス</span>
+      <label><span class='color-change-black'>メールアドレス（ログイン画面にテスト用アドレスを記載しています）</span>
         <input class="inputs" id="js-input-email" type="email" name="email" placeholder="test@test.com" value="<?php if (!empty($_POST['email'])) echo $_POST['email']; ?>">
       </label>
 

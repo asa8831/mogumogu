@@ -36,9 +36,6 @@ if(!empty($_POST)){
   }
  }
 }
-
-
-
 ?>
 
 
@@ -50,7 +47,7 @@ require('head.php'); ?>
 
   <?php require('header.php'); ?>
 
-  <section class="choise-wrap">
+  <section class="choice-wrap">
 
     <form method='post'>
 

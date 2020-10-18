@@ -71,7 +71,6 @@ if (!empty($_POST)) {
 
            //  DBからとってきたデータでidが中に残っているので取り出してセッションへ
             $_SESSION['user_id'] = array_shift($result);
-            
             header('Location:choice.php');
 
           }else{
@@ -109,7 +108,7 @@ require('head.php'); ?>
 
       <div class="err-msg js-err-email"><?php if (!empty($err_msg['email'])) echo $err_msg['email']; ?></div>
 
-      <label><span class='color-change-black'>メールアドレス</span>
+      <label><span class='color-change-black'>メールアドレス（テスト用ログインアドレスtest@co.jp）</span>
         <input class="inputs js-input-email" type="email" name="email" placeholder="test@test.com" value="<?php if (!empty($_POST['email'])) echo $_POST['email']; ?>">
       </label>
 
@@ -117,7 +116,7 @@ require('head.php'); ?>
 
       <div class="err-msg js-err-pass"><?php if (!empty($err_msg['pass'])) echo $err_msg['pass']; ?></div>
 
-      <label class="label"><span class='color-change-black'>パスワード</span>
+      <label class="label"><span class='color-change-black'>パスワード（テスト用ログインパスワードtesttest）</span>
         <input class="inputs js-input-pass" type="password" name="pass">
       </label>
 
